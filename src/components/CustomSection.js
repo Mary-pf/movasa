@@ -3,6 +3,9 @@ export default function CustomSection() {
     <section className="section stream-field my-4 py-4">
       <div className="container rich_text-block">
         <div className="columns rich-text-block">
+          {/* <div style={{textAlign:"center", fontSize:"20px"}}>
+              <p><strong>"مواسا"</strong> به شما کمک می‌کند تا نرخ‌های ارائه دهندگان بیشتری را باهم مقایسه کنید</p>
+          </div> */}
           <div className="column">
             <div className="custom-1 row">
               <div className="item-wrapper">
@@ -61,6 +64,40 @@ export default function CustomSection() {
                   </div>
                 </div>
               </div>
+              <div className="item-wrapper">
+                <div className="item-content">
+                  <img
+                    src="https://rates.ca/sites/default/files/2025-06/google.png"
+                    alt="Google Rating"
+                    width={394}
+                    height={66}
+                    loading="lazy"
+                  />
+                  <div className="item-text">
+                    <strong>Rated 4.6+ on Google. </strong>Join thousands of happy customers.
+                  </div>
+                </div>
+                <div className="divider">&nbsp;</div>
+              </div>
+
+              <div className="item-wrapper">
+                <div className="item-content">
+                  <img
+                    src="https://rates.ca/sites/default/files/2025-06/canadian%20flag.png"
+                    alt="Canadian Trust"
+                    width={116}
+                    height={112}
+                    loading="lazy"
+                  />
+                  <div className="item-text">
+                    <strong>We've found the best personalized rates for 1+ million Canadians. </strong>
+                    When can we help you find yours?
+                  </div>
+                </div>
+                <div className="divider">&nbsp;</div>
+              </div>
+
+          
             </div>
           </div>
         </div>

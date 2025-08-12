@@ -15,21 +15,21 @@ export default function MainContent() {
   const [activeTab, setActiveTab] = useState("car");
 
   const tabs = [
-    { id: "car", label: "Car Insurance", icon: <FaCarSide /> },
-    { id: "home", label: "Home Insurance", icon: <FaHome /> },
-    { id: "travel", label: "Travel Insurance", icon: <FaPlane /> },
-    { id: "business", label: "Business Insurance", icon: <FaBusinessTime /> },
-    { id: "mortgage", label: "Mortgage Rates", icon: <FaMoneyCheckAlt /> },
-    { id: "credit", label: "Credit Cards", icon: <FaCreditCard /> },
+    { id: "car", label: "وسایل نقلیه", icon: <FaCarSide /> },
+    { id: "home", label: "اموال", icon: <FaHome /> },
+    { id: "travel", label: "بیمه اشخاص", icon: <FaPlane /> },
+    { id: "business", label: "بیمه مسئولیت", icon: <FaBusinessTime /> },
+    { id: "mortgage", label: "سرمایه گذاری", icon: <FaMoneyCheckAlt /> },
+    { id: "credit", label: "سرویس‌های اعتباری", icon: <FaCreditCard /> },
   ];
 
   return (
     <>
       <main>
         <h1>
-          Get a <span>better rate.</span>
+          نرخ <span>بهتری را دریافت کنید</span>
         </h1>
-        <p>Compare car insurance, mortgages and credit cards in just a few clicks.</p>
+        <p>بیمه خودرو، اموال و سرویس‌های اعتباری را تنها با چند کلیک مقایسه کنید</p>
 
         <div className="tabs">
           {tabs.map((tab) => (
@@ -52,7 +52,7 @@ export default function MainContent() {
           <div className="input-icon">
             <FaMapMarkerAlt />
           </div>
-          <input type="text" placeholder="Postal Code" />
+          <input type="text" placeholder="کد ملی یا کد پستی" />
           <button>Get My Quote</button>
         </div>
       </main>
@@ -129,7 +129,9 @@ export default function MainContent() {
           overflow: hidden;
           max-width: 350px;
           width: 90vw;
+height: 50px;
         }
+
         .input-icon {
           padding: 0 12px;
           color: #555;
@@ -146,15 +148,18 @@ export default function MainContent() {
           background: transparent;
         }
         button {
-          background-color: #d93025;
-          border: none;
-          color: white;
-          padding: 14px 28px;
-          font-weight: 700;
-          font-size: 16px;
-          cursor: pointer;
-          border-radius: 50px;
-          transition: background-color 0.3s ease;
+          background-color: #a4221b;
+              color: white;
+    font-weight: 700;
+    min-width: 162px;
+    margin-left: -60px;
+    border-radius: 36px;
+  border-color: transparent
+      font-size: 1.1rem;
+    height: 55px;
+    opacity: 1;
+    margin-bottom: 3px;
+
         }
         button:hover {
           background-color: #a4221b;

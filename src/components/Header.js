@@ -8,13 +8,13 @@ export default function Header() {
   const [searchBoxOpen, setSearchBoxOpen] = useState(false);
 
   const menuItems = [
-    { id: "car", label: "Car Insurance", options: ["Option 1", "Option 2"] },
-    { id: "home", label: "Home Insurance", options: ["Option A", "Option B"] },
-    { id: "business", label: "Business Insurance", options: ["Biz 1", "Biz 2"] },
-    { id: "mortgage", label: "Mortgage Rates", options: ["Rate 1", "Rate 2"] },
-    { id: "credit", label: "Credit Cards", options: ["Card 1", "Card 2"] },
-    { id: "more", label: "More Options", options: ["Option X", "Option Y", "Option Z"] },
-    { id: "news", label: "News and Resources", options: ["News 1", "Resource A", "Resource B"] },
+    { id: "car", label: "بیمه وسایل نقلیه", options: ["Option 1", "Option 2"] },
+    { id: "home", label: "بیمه اموال", options: ["Option A", "Option B"] },
+    { id: "business", label: "بیمه مسئولیت", options: ["Biz 1", "Biz 2"] },
+    { id: "mortgage", label: "مشارکت", options: ["Rate 1", "Rate 2"] },
+    { id: "credit", label: "سرویس‌های اعتباری", options: ["Card 1", "Card 2"] },
+    { id: "more", label: "گزینه های بیشتر", options: ["Option X", "Option Y", "Option Z"] },
+    { id: "news", label: "اخبار و منابع", options: ["News 1", "Resource A", "Resource B"] },
   ];
 
   const toggleDropdown = (id) => {
@@ -33,7 +33,7 @@ export default function Header() {
   return (
     <>
       <header>
-        <div className="logo">Rates.ca</div>
+        <div className="logo">LOGO</div>
         <nav>
           {menuItems.map(({ id, label, options }) => (
             <div
