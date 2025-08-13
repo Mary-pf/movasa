@@ -81,32 +81,25 @@ export default function PostalCodeModal() {
                 className="responsive-image"
               />
             </div>
-            <div className="text-column">
-              <h2>
-                Shopping for the best rate is a smart thing to do — we make it
-                easier.
-              </h2>
+            <div className="text-column" dir="rtl">
+              <h4>
+               لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. 
+              </h4>
               <p>
-                Tracking your spending, automating savings, shopping with a list
-                – these are small habits that add up to big wins for your
-                finances.
+               لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. 
               </p>
               <p>
-                Here’s another habit to try: comparing rates on insurance
-                policies, mortgages, and credit cards.
+چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. 
               </p>
               <p>
-                Shopping around helps you make informed decisions and get more
-                value from financial products you use daily.
+کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد.
               </p>
               <p>
-                Today, Rates.ca can shop for you. We compare rates from dozens of
-                providers to find your best deal.
+در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
               </p>
-              <p>Begin a new savings habit today. Big wins start with small steps.</p>
 
               <button className="button-css button-css-red" onClick={openModal}>
-                Get Quotes
+دریافت نقل قول
               </button>
             </div>
           </div>

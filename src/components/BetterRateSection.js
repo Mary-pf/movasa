@@ -2,7 +2,7 @@ import React from "react";
 
 const BetterRateSection = () => {
   return (
-    <section style={{ display: "flex", alignItems: "center", minHeight: "300px", fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif", marginBottom: "20px" }}>
+    <section style={{ display: "flex", alignItems: "center", minHeight: "300px", marginBottom: "20px" }}>
       {/* بخش سمت چپ قرمز */}
       <div style={{
         backgroundColor: "#dd3127",
@@ -24,22 +24,23 @@ const BetterRateSection = () => {
       </div>
 
       {/* بخش سمت راست سفید */}
-      <div style={{
-        flex: 1,
-    clipPath: "ellipse(100% 60% at 100% 50%)",
-    padding: "0 20px 0 0",
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-        backgroundColor: "white",
-        padding: "2rem 2.5rem",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        borderTopLeftRadius: "50% 100%",
-        borderBottomLeftRadius: "50% 100%",
-        boxSizing: "border-box",
-      }}>
+      <div style={{ backgroundColor: "#DF3226" }}>
+  <div
+    style={{
+      flex: 1,
+      clipPath: "ellipse(100% 60% at 100% 50%)",
+      backgroundColor: "white", // این شکل سفید باقی می‌مونه
+      padding: "8.64rem 2.5rem",
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "center",
+      borderTopLeftRadius: "50% 100%",
+      borderBottomLeftRadius: "50% 100%",
+      boxSizing: "border-box",
+      
+    }}
+  >
+
         <h3 style={{ fontWeight: "700", marginBottom: "0.5rem" }}>
           More providers than anyone else
         </h3>
@@ -47,6 +48,7 @@ const BetterRateSection = () => {
           50+
         </span>
         <span>insurance companies alone!</span>
+      </div>
       </div>
     </section>
   );

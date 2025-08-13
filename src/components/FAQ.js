@@ -41,9 +41,9 @@ export default function FAQ() {
   };
 
   return (
-    <div className="faq-container">
+    <div className="faq-container" dir="rtl">
       <div className="faq-intro">
-        <h3>Got questions about what we do?</h3>
+        <h5 style={{fontWeight:"bold"}}>خرید با بهترین قیمت، کاری هوشمندانه است - ما این کار را آسان‌تر می‌کنیم</h5>
         <p>We help Canadians make better insurance and money decisions.</p>
         <img
           src="/ratesbot.svg"
@@ -92,7 +92,7 @@ export default function FAQ() {
         .faq-intro {
           flex: 1 1 35%;
           min-width: 280px;
-          font-family: Arial, sans-serif;
+          // font-family: Arial, sans-serif;
         }
         .faq-intro h3 {
           font-size: 1.5rem;

@@ -9,12 +9,15 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: 'Vazir', sans-serif;
+}
 
 header {
           display: flex;
           align-items: center;
           padding: 0 20px;
-          height: 60px;
+          height: 90px;
           border-bottom: 1px solid #eee;
           background: white;
           font-weight: 600;
@@ -160,7 +163,7 @@ nav > div:hover {
 .custom-1 {
   display: flex;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  /* font-family: Arial, sans-serif; */
 }
 
 .custom-1 .row {
@@ -349,7 +352,7 @@ nav > div:hover {
           background-color: #ff3860;
           color: white;
           border: none;
-          padding: 0.6rem 1.2rem;
+          padding: 0.2rem 1.2rem;
           font-size: 1rem;
           cursor: pointer;
           border-radius: 18px;
@@ -589,10 +592,17 @@ nav > div:hover {
 }
 
 
+
 .shopContainer {
   background-color: #f7f7f7;
   padding: 40px 20px;
 }
+
+.no-bootstrap-adjust {
+  margin-left: 0 !important;
+  border-radius: 50px !important;
+}
+
 
 .wrapper {
   max-width: 1200px;
@@ -662,3 +672,7 @@ nav > div:hover {
 .btn:hover {
   background: #005bb5;
 }
+
+
+
+

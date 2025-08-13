@@ -49,6 +49,7 @@ export default function Header() {
               {id === "news" && (
                 <FaSearch
                   className="search-icon"
+                  style={{marginRight:"90px"}}
                   onClick={(e) => toggleSearchBox(e)}
                   tabIndex={0}
                   role="button"

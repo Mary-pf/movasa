@@ -1,13 +1,89 @@
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
+
+
 export default function BoxContent() {
+      const creditCards = [
+    {
+      label: "Best Rewards Card",
+      name: "American Express Cobalt® Credit Card",
+    },
+    {
+      label: "Best Travel Card",
+      name: "CIBC Aventura® Visa Infinite* Card",
+    },
+    {
+      label: "Best Travel Card With No Foreign Transaction Fees",
+      name: "Scotiabank® Gold American Express® Card",
+    },
+    {
+      label: "Best Card for Earning Travel Points",
+      name: "American Express Cobalt® Credit Card",
+    },
+    {
+      label: "Best Balance Transfer Credit Card",
+      name: "MBNA True Line Mastercard",
+    },
+  ];
   return (
 <div className="paragraph paragraph--type--best-of-finance paragraph--view-mode--default" style={{marginBottom:"90px"}}>
             <div className="snippet snippet-accordion_snippet snippet- best_of_finance-block">
     <div className="container best-of-finance-inner">
         <div className="bof-heading">
             <div className="rich-text">
-                <h2><strong>Best Credit Cards in Canada for 2025</strong></h2><p>Finding a credit card that complements your lifestyle and spending habits can be daunting. There are so many to choose from, and nobody has time for all that fine print — well, no one except us. Our team analyzed over 80 credit cards across 20 categories for the best value to help take the guesswork out of shopping for a new card.</p><p>Scroll through the categories below, or <a href="https://rates.ca/credit-cards" target="_blank" rel="noopener noreferrer">click here for the full list of Best Credit Cards 2025 award winners</a><strong>.</strong></p>
+                <h2><strong>مشتریان حقوقی ما</strong></h2><p>پیدا کردن کارت اعتباری که با سبک زندگی و عادات خرج کردن شما مطابقت داشته باشد، می‌تواند دلهره‌آور باشد. گزینه‌های زیادی برای انتخاب وجود دارد و هیچ‌کس وقت کافی برای جزئیات ریز ندارد - خب، هیچ‌کس جز ما. تیم ما بیش از 80 کارت اعتباری را در 20 دسته برای بهترین ارزشی بررسی کرد تا از حدس و گمان برای خرید کارت جدید جلوگیری کند.</p><p>در دسته‌بندی‌های زیر جستجو کنید، یا برای مشاهده لیست کامل برندگان جایزه بهترین کارت‌های اعتباری 2025 اینجا کلیک کنید.
+                 </p>
             </div>
         </div>
+         <div className="p-4 bg-white rounded mb-5">
+        <Swiper
+          modules={[Navigation, Pagination]}
+          slidesPerView={1}
+          navigation
+          pagination={{ clickable: true }}
+          spaceBetween={20}
+        >
+          {creditCards.map((card, idx) => (
+            <SwiperSlide key={idx}>
+              <div className="d-flex align-items-center justify-content-between p-3 bg-light rounded mb-2">
+                <div>
+                  <span className="badge bg-danger me-2">{card.label}</span>
+                  {card.name}
+                </div>
+                <button className="btn btn-dark">اطلاعات بیشتر</button>
+              </div>
+              <div className="d-flex align-items-center justify-content-between p-3 bg-light rounded mb-2">
+                <div>
+                  <span className="badge bg-danger me-2">{card.label}</span>
+                  {card.name}
+                </div>
+                <button className="btn btn-dark">اطلاعات بیشتر</button>
+              </div>
+              <div className="d-flex align-items-center justify-content-between p-3 bg-light rounded mb-2">
+                <div>
+                  <span className="badge bg-danger me-2">{card.label}</span>
+                  {card.name}
+                </div>
+                <button className="btn btn-dark">اطلاعات بیشتر</button>
+              </div>
+              <div className="d-flex align-items-center justify-content-between p-3 bg-light rounded mb-2">
+                <div>
+                  <span className="badge bg-danger me-2">{card.label}</span>
+                  {card.name}
+                </div>
+                <button className="btn btn-dark">اطلاعات بیشتر</button>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+        <div className="text-center mt-3">
+          <button className="btn btn-outline-danger">Full list of winners</button>
+        </div>
+      </div>
                      {/* <div  className="winner-item">
                 <div  className="winner-container">
                     <div  className="mobile-winner-top">
@@ -47,7 +123,7 @@ export default function BoxContent() {
                                             <div  className="cta-container">
                                 <form  className="cta-forms " method="GET" action="credit-cards" target="_top">
                     <div  className="has-text-centered">
-                <button type="submit"  className="button-css " aria-label="submit form" tabIndex="0">Learn More</button>
+                <button type="submit"  className="button-css " aria-label="submit form" tabIndex="0">اطلاعات بیشتر</button>
             </div>
             
 
