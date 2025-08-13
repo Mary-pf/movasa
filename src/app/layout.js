@@ -1,7 +1,4 @@
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
-
 
 export const metadata = {
   title: "مواسا",
@@ -10,11 +7,16 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="fa" dir="rtl">
       <head>
-        <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css" rel="stylesheet" type="text/css" />
+        {/* لینک فونت وزیر از jsDelivr */}
+        <link
+          href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css"
+          rel="stylesheet"
+          type="text/css"
+        />
       </head>
-      <body>
+      <body style={{ fontFamily: "Vazir, sans-serif" }}>
         {children}
       </body>
     </html>

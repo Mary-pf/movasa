@@ -10,21 +10,21 @@ const BetterRateSection = () => {
         flex: 2,
         padding: "2rem 3rem",
       }}>
-        <h2 style={{ fontWeight: "600", marginBottom: "1rem" }}>A better rate is waiting</h2>
-        <h3 style={{ fontWeight: "700", marginBottom: "1rem" }}>Find it faster with Rates.ca</h3>
+        <h2 style={{ fontWeight: "600", marginBottom: "1rem" }}>لورم ایپسوم</h2>
+        {/* <h3 style={{ fontWeight: "700", marginBottom: "1rem" }}>لورم</h3> */}
         <p style={{ lineHeight: "1.6", marginBottom: "1rem" }}>
-          With easy-to-use, flexible online tools that let you search the market, you can compare the best rates on insurance, mortgages and credit cards in Canada.
+لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد.
         </p>
         <p style={{ lineHeight: "1.6", marginBottom: "1rem" }}>
-          In just a few clicks you’ll be matched with a wide range of quotes from Canada’s top providers – the names you know and trust – empowering you to make the right decision for your life and budget.
+لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد.
         </p>
-        <p style={{ lineHeight: "1.6" }}>
-          Just as easy as it is to search for a hotel on a comparison website, you can now do the same for your car or home insurance, your mortgage, and the credit cards in your wallet.
-        </p>
+        {/* <p style={{ lineHeight: "1.6" }}>
+لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد.
+        </p> */}
       </div>
 
       {/* بخش سمت راست سفید */}
-      <div style={{ backgroundColor: "#DF3226" }}>
+      {/* <div style={{ backgroundColor: "#DF3226" }}> */}
   <div
     style={{
       flex: 1,
@@ -42,14 +42,14 @@ const BetterRateSection = () => {
   >
 
         <h3 style={{ fontWeight: "700", marginBottom: "0.5rem" }}>
-          More providers than anyone else
+لورم ایپسوم
         </h3>
         <span style={{ fontSize: "3rem", fontWeight: "900", color: "#dd3127", marginBottom: "0.3rem", lineHeight: "1" }}>
           50+
         </span>
-        <span>insurance companies alone!</span>
+        <span>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم</span>
       </div>
-      </div>
+      {/* </div> */}
     </section>
   );
 };

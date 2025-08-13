@@ -99,15 +99,15 @@ export default function CreditPage() {
       </div> */}
 
       {/* Mortgage Calculators Section */}
-      <div className="p-4 bg-white rounded shadow mb-5 text-center">
-        <h4 className="mb-4">سرمایه گذاری</h4>
+      <div className="p-4 bg-white rounded shadow mb-5 mt-5 text-center" style={{marginTop:"30px"}}>
+        <h4 className="my-4">سرمایه گذاری</h4>
         <div className="row justify-content-center">
           {calculators.map((calc, idx) => (
             <div key={idx} className="col-12 col-sm-6 col-lg-4 mb-3">
               <div className="p-3 bg-light rounded shadow">
                 <div style={{ fontSize: "32px" }}>{calc.icon}</div>
                 <h6 className="mt-2">{calc.title}</h6>
-                <button className="btn btn-danger btn-sm mt-2">Launch Calculator</button>
+                <button className="btn btn-danger btn-sm mt-2">اطلاعات بیشتر</button>
               </div>
             </div>
           ))}

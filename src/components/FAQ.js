@@ -2,34 +2,34 @@ import { useState } from "react";
 
 const faqs = [
   {
-    question: "Is Rates.ca a broker?",
+    question: "لورم ایپسوم",
     answer:
-      "No, Rates.ca is not a broker. We help you compare insurance, mortgage, and credit card rates from multiple providers to find the best deal.",
+"بهترین قیمت، کاری هوشمندانه است - ما این کار را آسان‌تر می‌کنیم",
   },
   {
-    question: "Are there any fees associated with using Rates.ca?",
+    question: "لورم ایپسوم",
     answer:
-      "Using Rates.ca is completely free for consumers. We earn commissions from providers when you choose a product.",
+"بهترین قیمت، کاری هوشمندانه است - ما این کار را آسان‌تر می‌کنیم",
   },
   {
-    question: "What products can I compare on Rates.ca?",
+    question: "لورم ایپسوم",
     answer:
-      "You can compare auto insurance, home insurance, mortgages, credit cards, and more.",
+"بهترین قیمت، کاری هوشمندانه است - ما این کار را آسان‌تر می‌کنیم",
   },
   {
-    question: "What provinces is Rates.ca available in?",
+    question: "لورم ایپسوم",
     answer:
-      "Rates.ca operates in most Canadian provinces except for some restrictions in certain regions.",
+"بهترین قیمت، کاری هوشمندانه است - ما این کار را آسان‌تر می‌کنیم",
   },
   {
-    question: "How will the information I provide on the site be used?",
+    question: "لورم ایپسوم",
     answer:
-      "Your information is used solely to provide personalized quotes and will not be shared without your consent.",
+"بهترین قیمت، کاری هوشمندانه است - ما این کار را آسان‌تر می‌کنیم",
   },
   {
-    question: "How do I get the best rates?",
+    question: "لورم ایپسوم",
     answer:
-      "Compare multiple providers using our platform and consider factors like coverage and discounts to choose the best rate for your needs.",
+"بهترین قیمت، کاری هوشمندانه است - ما این کار را آسان‌تر می‌کنیم",
   },
 ];
 

@@ -51,27 +51,17 @@ function ThreeColumns() {
         alignItems: "start",
       }}
     >
-      {/* ستون 1 */}
-      <div style={{ textAlign: "center" }}>
-        <button
-          style={{
-            padding: "12px 24px",
-            borderRadius: "36px",
-            backgroundColor: "#a4221b",
-            color: "#fff",
-            fontWeight: "700",
-            fontSize: "1rem",
-            border: "none",
-            cursor: "pointer",
-            alignItems:"end"
-          }}
-        >
-          ثبت نام
-        </button>
+     
+      {/* ستون 3 */}
+      <div style={{ textAlign: "start" }}>
+        <h5 style={{ marginBottom: "24px" }}>نکات صرفه‌جویی در هزینه را در صندوق ورودی خود دریافت کنید</h5>
+        <p style={{ fontSize: "0.9rem", color: "#555" }}>
+از نکات مربوط به امور مالی شخصی متخصصان مالی ما مطلع باشید!
+        </p>
       </div>
 
       {/* ستون 2 */}
-      <div style={{ textAlign: "end" }}>
+      <div style={{ textAlign: "start" }}>
         <h3 style={{ marginBottom: "18px" }}>آدرس ایمیل</h3>
         <input
           type="email"
@@ -91,12 +81,24 @@ function ThreeColumns() {
         </p>
       </div>
 
-      {/* ستون 3 */}
-      <div style={{ textAlign: "end" }}>
-        <h5 style={{ marginBottom: "24px" }}>نکات صرفه‌جویی در هزینه را در صندوق ورودی خود دریافت کنید</h5>
-        <p style={{ fontSize: "0.9rem", color: "#555" }}>
-از نکات مربوط به امور مالی شخصی متخصصان مالی ما مطلع باشید!
-        </p>
+
+       {/* ستون 1 */}
+      <div style={{ textAlign: "center" }}>
+        <button
+          style={{
+            padding: "12px 24px",
+            borderRadius: "36px",
+            backgroundColor: "#a4221b",
+            color: "#fff",
+            fontWeight: "700",
+            fontSize: "1rem",
+            border: "none",
+            cursor: "pointer",
+            alignItems:"start"
+          }}
+        >
+          ثبت نام
+        </button>
       </div>
 
       {/* ریسپانسیو برای موبایل */}

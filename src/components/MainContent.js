@@ -294,11 +294,14 @@ mortgage: {
         }
 
         .tab.active {
-          color: #222;
-          border: 2px solid #d93025; /* باکس دور تب فعال */
-          box-shadow: 0 8px 20px rgba(217, 48, 37, 0.12);
-          background: #fff3f2;
-        }
+        z-index:10000;
+  color: #222;
+  border: 2px solid #d93025; /* قاب قرمز دور تب فعال */
+  border-bottom: none; /* خط پایین حذف بشه تا به content بچسبه */
+  box-shadow: 0 8px 20px rgba(217, 48, 37, 0.12);
+  background: white;
+  border-radius: 12px 12px 0 0; /* فقط بالا گرد بشه */
+}
 
         .tab.active .icon-bg {
           background-color: black;
@@ -323,22 +326,25 @@ mortgage: {
 
         .underline {
           height: 3px;
-          background-color: #d93025;
+          background-color: white;
           width: 100%;
           border-radius: 3px;
-          margin-top: 6px;
+          margin-top: 19px;
         }
           
+
+
 .tab-content {
   width: auto;
   min-width: 650px;
   background: #ffffff;
-  border-radius: 12px;
+  border-radius: 0 0 12px 12px; /* فقط پایین گرد بشه */
   padding: 14px;
-  margin-top: 10px;
+  margin-top: 0; /* فاصله حذف بشه تا بچسبه به تب */
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
   animation: slideDown 200ms ease forwards;
-  border: 1px solid #eee;
+  border: 2px solid #d93025; /* قاب قرمز مثل تب */
+  // border-top: none; /* خط بالا حذف بشه چون تب هست */
 }
   
         .tab-title {
@@ -507,7 +513,7 @@ margin-left:28rem;
           color: white;
           font-weight: 700;
           min-width: 162px;
-          margin-left: -60px;
+margin-left: -60px !important;
           border-radius: 36px;
           border-color: transparent;
           font-size: 1.1rem;

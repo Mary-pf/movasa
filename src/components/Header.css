@@ -1,0 +1,90 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: #f8f8f8;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.dropdown {
+  position: relative;
+  cursor: pointer;
+}
+
+.arrow {
+  margin-left: 5px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 35px;
+  right: 0;
+  background: white;
+  border: 1px solid #ccc;
+  min-width: 150px;
+  z-index: 10;
+}
+
+.dropdown-item {
+  padding: 8px 12px;
+}
+
+.dropdown-item:hover {
+  background: #eee;
+}
+
+.search-icon {
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+.search-box {
+  background: white;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+/* موبایل */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* موبایل استایل */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: white;
+    width: 200px;
+    border: 1px solid #ccc;
+  }
+
+  .nav.open {
+    display: flex;
+  }
+
+  .dropdown-menu {
+    position: static;
+    border: none;
+    background: #f9f9f9;
+  }
+}

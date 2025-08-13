@@ -9,24 +9,24 @@ import "swiper/css/pagination";
 export default function BoxContent() {
       const creditCards = [
     {
-      label: "Best Rewards Card",
-      name: "American Express Cobalt® Credit Card",
+      label: "لورم ایپسوم",
+      name: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ",
     },
     {
-      label: "Best Travel Card",
-      name: "CIBC Aventura® Visa Infinite* Card",
+      label: "لورم ایپسوم",
+      name: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ",
     },
     {
-      label: "Best Travel Card With No Foreign Transaction Fees",
-      name: "Scotiabank® Gold American Express® Card",
+      label: "لورم ایپسوم",
+      name: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ",
     },
     {
-      label: "Best Card for Earning Travel Points",
-      name: "American Express Cobalt® Credit Card",
+      label: "لورم ایپسوم",
+      name: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ",
     },
     {
-      label: "Best Balance Transfer Credit Card",
-      name: "MBNA True Line Mastercard",
+      label: "لورم ایپسوم",
+      name: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ",
     },
   ];
   return (
@@ -51,28 +51,28 @@ export default function BoxContent() {
             <SwiperSlide key={idx}>
               <div className="d-flex align-items-center justify-content-between p-3 bg-light rounded mb-2">
                 <div>
-                  <span className="badge bg-danger me-2">{card.label}</span>
+                  <span className="badge bg-danger ms-4">{card.label}</span>
                   {card.name}
                 </div>
                 <button className="btn btn-dark">اطلاعات بیشتر</button>
               </div>
               <div className="d-flex align-items-center justify-content-between p-3 bg-light rounded mb-2">
                 <div>
-                  <span className="badge bg-danger me-2">{card.label}</span>
+                  <span className="badge bg-danger ms-4">{card.label}</span>
                   {card.name}
                 </div>
                 <button className="btn btn-dark">اطلاعات بیشتر</button>
               </div>
               <div className="d-flex align-items-center justify-content-between p-3 bg-light rounded mb-2">
                 <div>
-                  <span className="badge bg-danger me-2">{card.label}</span>
+                  <span className="badge bg-danger ms-4">{card.label}</span>
                   {card.name}
                 </div>
                 <button className="btn btn-dark">اطلاعات بیشتر</button>
               </div>
               <div className="d-flex align-items-center justify-content-between p-3 bg-light rounded mb-2">
                 <div>
-                  <span className="badge bg-danger me-2">{card.label}</span>
+                  <span className="badge bg-danger ms-4">{card.label}</span>
                   {card.name}
                 </div>
                 <button className="btn btn-dark">اطلاعات بیشتر</button>
@@ -81,7 +81,7 @@ export default function BoxContent() {
           ))}
         </Swiper>
         <div className="text-center mt-3">
-          <button className="btn btn-outline-danger">Full list of winners</button>
+          <button className="btn btn-outline-danger">اطلاعات بیشتر</button>
         </div>
       </div>
                      {/* <div  className="winner-item">
@@ -92,17 +92,17 @@ export default function BoxContent() {
                                                 <div className="name-container">
                             <div className="reward-name">
                                 <div className="rich-text">
-                                    <p>Best Rewards Card</p>
+                                    <p>لورم ایپسوم</p>
                                 </div>
                             </div>
                             <div className="winner-name">
-                                American Express Cobalt® Credit Card
+                                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ
                             </div>
                         </div>
                     </div>
                       
                         <div  className="card-link">
-                            <a  className="card-anchor" href="https://rates.ca/credit-cards" title="Best Rewards Card" tabIndex="0">
+                            <a  className="card-anchor" href="https://rates.ca/credit-cards" title="لورم ایپسوم" tabIndex="0">
                                 <i  className="icon-RDOT_Icon_Arrow_Right_Chevron" aria-hidden="true"></i>
                             </a>
                         </div>
@@ -112,11 +112,11 @@ export default function BoxContent() {
                                                 <div  className="name-container">
                             <div  className="reward-name">
                                 <div  className="rich-text">
-                                    <p>Best Rewards Card</p>
+                                    <p>لورم ایپسوم</p>
                                 </div>
                             </div>
                             <div  className="winner-name">
-                                American Express Cobalt® Credit Card
+                                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ
                             </div>
                         </div>
                     </div>
