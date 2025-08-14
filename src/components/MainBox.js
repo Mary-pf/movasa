@@ -44,6 +44,7 @@ export default function MainBox() {
 function ThreeColumns() {
   return (
     <div
+      className="three-cols"
       style={{
         display: "grid",
         gridTemplateColumns: "repeat(3, 1fr)",
@@ -51,12 +52,13 @@ function ThreeColumns() {
         alignItems: "start",
       }}
     >
-     
       {/* ستون 3 */}
       <div style={{ textAlign: "start" }}>
-        <h5 style={{ marginBottom: "24px" }}>نکات صرفه‌جویی در هزینه را در صندوق ورودی خود دریافت کنید</h5>
+        <h5 style={{ marginBottom: "24px" }}>
+          نکات صرفه‌جویی در هزینه را در صندوق ورودی خود دریافت کنید
+        </h5>
         <p style={{ fontSize: "0.9rem", color: "#555" }}>
-از نکات مربوط به امور مالی شخصی متخصصان مالی ما مطلع باشید!
+          از نکات مربوط به امور مالی شخصی متخصصان مالی ما مطلع باشید!
         </p>
       </div>
 
@@ -77,12 +79,12 @@ function ThreeColumns() {
           dir="rtl"
         />
         <p style={{ fontSize: "0.9rem", color: "#555" }}>
-بله مایلم پیشنهادات و خبرنامه‌ها را از طریق ایمیل مواسا دریافت کنم. می‌توانم در هر زمانی اشتراک خود را لغو کنم.
+          بله مایلم پیشنهادات و خبرنامه‌ها را از طریق ایمیل مواسا دریافت کنم.
+          می‌توانم در هر زمانی اشتراک خود را لغو کنم.
         </p>
       </div>
 
-
-       {/* ستون 1 */}
+      {/* ستون 1 */}
       <div style={{ textAlign: "center" }}>
         <button
           style={{
@@ -94,21 +96,25 @@ function ThreeColumns() {
             fontSize: "1rem",
             border: "none",
             cursor: "pointer",
-            alignItems:"start"
           }}
         >
           ثبت نام
         </button>
       </div>
 
-      {/* ریسپانسیو برای موبایل */}
+      {/* ریسپانسیو */}
       <style jsx>{`
         @media (max-width: 900px) {
-          div :global(div) {
+          .three-cols {
             grid-template-columns: 1fr !important;
+            text-align: center;
+          }
+          .three-cols > div {
+            margin-bottom: 20px;
           }
         }
       `}</style>
     </div>
   );
 }
+

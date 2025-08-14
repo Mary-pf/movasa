@@ -299,6 +299,8 @@ nav > div:hover {
     }
 }
 
+
+
 .product-block-image {
     min-width: 50%;
     display: flex;
@@ -688,3 +690,42 @@ nav > div:hover {
 
 
 
+
+
+.product-section {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.product-block {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.product-block-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.product-block-body {
+  flex: 1;
+  line-height: 1.8;
+}
+
+/* 📱 حالت موبایل و تبلت */
+@media (max-width: 1024px) {
+  .product-block {
+    flex-direction: column; /* زیر هم */
+    text-align: center;
+  }
+
+  .product-block-image {
+    order: 1; /* عکس اول */
+  }
+
+  .product-block-body {
+    order: 2; /* متن دوم */
+  }
+}

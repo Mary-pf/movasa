@@ -1,11 +1,12 @@
 "use client";
 
 import React, { useState } from "react";
-import { FaSearch } from "react-icons/fa";
+import { FaSearch, FaBars, FaTimes } from "react-icons/fa";
 
 export default function Header() {
   const [openDropdown, setOpenDropdown] = useState(null);
   const [searchBoxOpen, setSearchBoxOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const menuItems = [
     { id: "car", label: "بیمه وسایل نقلیه", options: ["Option 1", "Option 2"] },
@@ -18,38 +19,40 @@ export default function Header() {
   ];
 
   const toggleDropdown = (id) => {
-    // اگر باکس سرچ باز بود ببندش وقتی دراپ‌داون باز میشه
     if (searchBoxOpen) setSearchBoxOpen(false);
-
     setOpenDropdown(openDropdown === id ? null : id);
   };
 
   const toggleSearchBox = (e) => {
-    e.stopPropagation(); // جلوگیری از بسته شدن منوها هنگام کلیک روی سرچ
+    e.stopPropagation();
     setSearchBoxOpen(!searchBoxOpen);
-    setOpenDropdown(null); // بستن منوهای دراپ‌داون وقتی سرچ باز میشه
+    setOpenDropdown(null);
   };
 
   return (
     <>
-      <header>
+      <header className="header">
         <div className="logo">LOGO</div>
-        <nav>
+
+        {/* دکمه همبرگری */}
+        <div className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
+          {menuOpen ? <FaTimes /> : <FaBars />}
+        </div>
+
+        <nav className={`nav ${menuOpen ? "open" : ""}`}>
           {menuItems.map(({ id, label, options }) => (
             <div
               key={id}
               className="dropdown"
               onClick={() => toggleDropdown(id)}
               tabIndex={0}
-              onKeyDown={() => {}}
             >
               {label}
-              {/* آیکون سرچ فقط برای news */}
               <span className="arrow">{openDropdown === id ? "▲" : "▼"}</span>
+
               {id === "news" && (
                 <FaSearch
                   className="search-icon"
-                  style={{marginRight:"90px"}}
                   onClick={(e) => toggleSearchBox(e)}
                   tabIndex={0}
                   role="button"
@@ -71,13 +74,101 @@ export default function Header() {
         </nav>
       </header>
 
-      {/* باکس جستجو زیر هدر */}
       {searchBoxOpen && (
         <div className="search-box">
           <input type="text" placeholder="Search..." autoFocus />
           <button onClick={() => setSearchBoxOpen(false)}>Close</button>
         </div>
       )}
+
+      <style jsx>{`
+        /* ====== ساختار کلی هدر ====== */
+        .header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 10px 20px;
+          background: #f8f8f8;
+          position: relative;
+        }
+        .logo {
+          font-size: 20px;
+          font-weight: bold;
+        }
+
+        /* ====== منوی دسکتاپ ====== */
+        .nav {
+          display: flex;
+          gap: 20px;
+          justify-content: center; /* وسط چین در دسکتاپ */
+          flex: 1; /* تا وسط قرار بگیره */
+        }
+        .dropdown {
+          position: relative;
+          cursor: pointer;
+        }
+        .arrow {
+          margin-left: 5px;
+        }
+        .dropdown-menu {
+          position: absolute;
+          top: 35px;
+          left: 0;
+          background: white;
+          border: 1px solid #ccc;
+          min-width: 150px;
+          z-index: 10;
+        }
+        .dropdown-item {
+          padding: 8px 12px;
+        }
+        .dropdown-item:hover {
+          background: #eee;
+        }
+        .search-icon {
+          margin-left: 8px;
+          cursor: pointer;
+        }
+        .search-box {
+          background: white;
+          padding: 10px;
+          border: 1px solid #ccc;
+        }
+
+        /* ====== دکمه همبرگری ====== */
+        .menu-toggle {
+          display: none;
+          font-size: 24px;
+          cursor: pointer;
+        }
+
+        /* ====== حالت موبایل/تبلت و ≤ 1400px ====== */
+        @media (max-width: 1250px) {
+          .menu-toggle {
+            display: block;
+          }
+          .nav {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 60px;
+            left: 20px; /* دقیقا زیر دکمه همبرگری */
+            background: white;
+            width: 200px;
+            border: 1px solid #ccc;
+            padding: 10px 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+          }
+          .nav.open {
+            display: flex;
+          }
+          .dropdown-menu {
+            position: static;
+            border: none;
+            background: #f9f9f9;
+          }
+        }
+      `}</style>
     </>
   );
 }

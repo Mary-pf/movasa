@@ -4,142 +4,63 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-
-
 export default function BoxContent() {
-      const creditCards = [
-    {
-      label: "لورم ایپسوم",
-      name: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ",
-    },
-    {
-      label: "لورم ایپسوم",
-      name: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ",
-    },
-    {
-      label: "لورم ایپسوم",
-      name: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ",
-    },
-    {
-      label: "لورم ایپسوم",
-      name: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ",
-    },
-    {
-      label: "لورم ایپسوم",
-      name: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ",
-    },
+  const creditCards = [
+    { label: "لورم ایپسوم", name: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ" },
+    { label: "لورم ایپسوم", name: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ" },
+    { label: "لورم ایپسوم", name: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ" },
+    { label: "لورم ایپسوم", name: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ" },
+    { label: "لورم ایپسوم", name: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ" },
   ];
+
   return (
-<div className="paragraph paragraph--type--best-of-finance paragraph--view-mode--default" style={{marginBottom:"90px"}}>
-            <div className="snippet snippet-accordion_snippet snippet- best_of_finance-block">
-    <div className="container best-of-finance-inner">
-        <div className="bof-heading">
-            <div className="rich-text">
-                <h2><strong>مشتریان حقوقی ما</strong></h2><p>پیدا کردن کارت اعتباری که با سبک زندگی و عادات خرج کردن شما مطابقت داشته باشد، می‌تواند دلهره‌آور باشد. گزینه‌های زیادی برای انتخاب وجود دارد و هیچ‌کس وقت کافی برای جزئیات ریز ندارد - خب، هیچ‌کس جز ما. تیم ما بیش از 80 کارت اعتباری را در 20 دسته برای بهترین ارزشی بررسی کرد تا از حدس و گمان برای خرید کارت جدید جلوگیری کند.</p><p>در دسته‌بندی‌های زیر جستجو کنید، یا برای مشاهده لیست کامل برندگان جایزه بهترین کارت‌های اعتباری 2025 اینجا کلیک کنید.
-                 </p>
-            </div>
+    <div
+      className="paragraph paragraph--type--best-of-finance paragraph--view-mode--default"
+      style={{
+        marginBottom: "90px",
+    background: "linear-gradient(180deg, #DF3226 -8.4%, #DF3226 14.07%, #CE0F69 112.4%)",
+        width: "100%",
+      }}
+    >
+      <div className="container best-of-finance-inner py-5">
+        <div className="bof-heading text-center text-white mb-4">
+          <h2 className="fw-bold">مشتریان حقوقی ما</h2>
+          <p className="mb-0">
+            پیدا کردن کارت اعتباری که با سبک زندگی و عادات خرج کردن شما مطابقت داشته باشد، می‌تواند دلهره‌آور باشد. گزینه‌های زیادی برای انتخاب وجود دارد و هیچ‌کس وقت کافی برای جزئیات ریز ندارد - خب، هیچ‌کس جز ما.
+          </p>
         </div>
-         <div className="p-4 bg-white rounded mb-5">
-        <Swiper
-          modules={[Navigation, Pagination]}
-          slidesPerView={1}
-          navigation
-          pagination={{ clickable: true }}
-          spaceBetween={20}
-        >
-          {creditCards.map((card, idx) => (
-            <SwiperSlide key={idx}>
-              <div className="d-flex align-items-center justify-content-between p-3 bg-light rounded mb-2">
-                <div>
-                  <span className="badge bg-danger ms-4">{card.label}</span>
-                  {card.name}
+
+        <div className="p-3 p-md-5 bg-white rounded">
+          <Swiper
+            modules={[Navigation, Pagination]}
+            navigation
+            pagination={{ clickable: true }}
+            spaceBetween={20}
+            breakpoints={{
+              0: { slidesPerView: 1 },
+              576: { slidesPerView: 1 },
+              768: { slidesPerView: 2 },
+              992: { slidesPerView: 3 }, // دسکتاپ همیشه 3 کارت
+            }}
+          >
+            {creditCards.map((card, idx) => (
+              <SwiperSlide key={idx}>
+                <div className="d-flex flex-column gap-2 p-3 bg-light rounded h-100">
+                  <div>
+                    <span className="badge bg-danger mb-2">{card.label}</span>
+                    <p className="mb-0">{card.name}</p>
+                  </div>
+                  <button className="btn btn-dark mt-auto">اطلاعات بیشتر</button>
                 </div>
-                <button className="btn btn-dark">اطلاعات بیشتر</button>
-              </div>
-              <div className="d-flex align-items-center justify-content-between p-3 bg-light rounded mb-2">
-                <div>
-                  <span className="badge bg-danger ms-4">{card.label}</span>
-                  {card.name}
-                </div>
-                <button className="btn btn-dark">اطلاعات بیشتر</button>
-              </div>
-              <div className="d-flex align-items-center justify-content-between p-3 bg-light rounded mb-2">
-                <div>
-                  <span className="badge bg-danger ms-4">{card.label}</span>
-                  {card.name}
-                </div>
-                <button className="btn btn-dark">اطلاعات بیشتر</button>
-              </div>
-              <div className="d-flex align-items-center justify-content-between p-3 bg-light rounded mb-2">
-                <div>
-                  <span className="badge bg-danger ms-4">{card.label}</span>
-                  {card.name}
-                </div>
-                <button className="btn btn-dark">اطلاعات بیشتر</button>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-        <div className="text-center mt-3">
-          <button className="btn btn-outline-danger">اطلاعات بیشتر</button>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+
+          <div className="text-center mt-3">
+            <button className="btn btn-outline-danger">اطلاعات بیشتر</button>
+          </div>
         </div>
       </div>
-                     {/* <div  className="winner-item">
-                <div  className="winner-container">
-                    <div  className="mobile-winner-top">
-                        <div className="winner-name-container">
-                                                                                <img src="/sites/default/files/Cobalt-219x138.width-500.png" className="icon-image" alt="" width="92" height="57" loading="lazy"/>
-                                                <div className="name-container">
-                            <div className="reward-name">
-                                <div className="rich-text">
-                                    <p>لورم ایپسوم</p>
-                                </div>
-                            </div>
-                            <div className="winner-name">
-                                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ
-                            </div>
-                        </div>
-                    </div>
-                      
-                        <div  className="card-link">
-                            <a  className="card-anchor" href="https://rates.ca/credit-cards" title="لورم ایپسوم" tabIndex="0">
-                                <i  className="icon-RDOT_Icon_Arrow_Right_Chevron" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div  className="winner-name-container">
-                                                                                <img src="/sites/default/files/Cobalt-219x138.width-500.png"  className="icon-image" alt="" width="92" height="57" loading="lazy"/>
-                                                <div  className="name-container">
-                            <div  className="reward-name">
-                                <div  className="rich-text">
-                                    <p>لورم ایپسوم</p>
-                                </div>
-                            </div>
-                            <div  className="winner-name">
-                                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ
-                            </div>
-                        </div>
-                    </div>
-                                            <div  className="cta-container">
-                                <form  className="cta-forms " method="GET" action="credit-cards" target="_top">
-                    <div  className="has-text-centered">
-                <button type="submit"  className="button-css " aria-label="submit form" tabIndex="0">اطلاعات بیشتر</button>
-            </div>
-            
-
-
-
-                    </form>
-
-
-
-
-
-                        </div>
-                                    </div>
-            </div> */}
-      </div>
-           </div>   
-  </div>
+    </div>
   );
 }

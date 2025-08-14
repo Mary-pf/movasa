@@ -2,54 +2,97 @@ import React from "react";
 
 const BetterRateSection = () => {
   return (
-    <section style={{ display: "flex", alignItems: "center", minHeight: "300px", marginBottom: "20px" }}>
+    <section className="better-rate-section">
       {/* بخش سمت چپ قرمز */}
-      <div style={{
-        backgroundColor: "#dd3127",
-        color: "white",
-        flex: 2,
-        padding: "2rem 3rem",
-      }}>
-        <h2 style={{ fontWeight: "600", marginBottom: "1rem" }}>لورم ایپسوم</h2>
-        {/* <h3 style={{ fontWeight: "700", marginBottom: "1rem" }}>لورم</h3> */}
-        <p style={{ lineHeight: "1.6", marginBottom: "1rem" }}>
-لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد.
+      <div className="left-box">
+        <h2>لورم ایپسوم</h2>
+        <p>
+          لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+          استفاده از طراحان گرافیک است...
         </p>
-        <p style={{ lineHeight: "1.6", marginBottom: "1rem" }}>
-لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد.
+        <p>
+          لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+          استفاده از طراحان گرافیک است...
         </p>
-        {/* <p style={{ lineHeight: "1.6" }}>
-لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد.
-        </p> */}
       </div>
 
       {/* بخش سمت راست سفید */}
-      {/* <div style={{ backgroundColor: "#DF3226" }}> */}
-  <div
-    style={{
-      flex: 1,
-      clipPath: "ellipse(100% 60% at 100% 50%)",
-      backgroundColor: "white", // این شکل سفید باقی می‌مونه
-      padding: "8.64rem 2.5rem",
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "center",
-      borderTopLeftRadius: "50% 100%",
-      borderBottomLeftRadius: "50% 100%",
-      boxSizing: "border-box",
-      
-    }}
-  >
-
-        <h3 style={{ fontWeight: "700", marginBottom: "0.5rem" }}>
-لورم ایپسوم
-        </h3>
-        <span style={{ fontSize: "3rem", fontWeight: "900", color: "#dd3127", marginBottom: "0.3rem", lineHeight: "1" }}>
-          50+
-        </span>
+      <div className="right-box">
+        <h3>لورم ایپسوم</h3>
+        <span className="big-number">50+</span>
         <span>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم</span>
       </div>
-      {/* </div> */}
+
+      <style jsx>{`
+        .better-rate-section {
+          display: flex;
+          align-items: center;
+          min-height: 300px;
+          margin-bottom: 20px;
+        }
+
+        .left-box {
+          background-color: #dd3127;
+          color: white;
+          flex: 2;
+          padding: 2rem 3rem;
+        }
+
+        .left-box h2 {
+          font-weight: 600;
+          margin-bottom: 1rem;
+        }
+
+        .left-box p {
+          line-height: 1.6;
+          margin-bottom: 1rem;
+        }
+
+        .right-box {
+          flex: 1;
+          clip-path: ellipse(100% 60% at 100% 50%);
+          background-color: white;
+          padding: 8.64rem 2.5rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          border-top-left-radius: 50% 100%;
+          border-bottom-left-radius: 50% 100%;
+          box-sizing: border-box;
+          text-align: center;
+        }
+
+        .right-box h3 {
+          font-weight: 700;
+          margin-bottom: 0.5rem;
+        }
+
+        .big-number {
+          font-size: 3rem;
+          font-weight: 900;
+          color: #dd3127;
+          margin-bottom: 0.3rem;
+          line-height: 1;
+        }
+
+        /* ریسپانسیو */
+        @media (max-width: 900px) {
+          .better-rate-section {
+            flex-direction: column;
+            text-align: center;
+          }
+
+          .right-box {
+            clip-path: none;
+            border-radius: 0;
+            padding: 3rem 2rem;
+          }
+
+          .left-box {
+            padding: 2rem;
+          }
+        }
+      `}</style>
     </section>
   );
 };
