@@ -2,11 +2,13 @@
 
 import React, { useState } from "react";
 import { FaSearch, FaBars, FaTimes } from "react-icons/fa";
+import AuthModal from "./AuthModal"; // مودال جدا
 
 export default function Header() {
   const [openDropdown, setOpenDropdown] = useState(null);
   const [searchBoxOpen, setSearchBoxOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [authModalOpen, setAuthModalOpen] = useState(false);
 
   const menuItems = [
     { id: "car", label: "بیمه وسایل نقلیه", options: ["Option 1", "Option 2"] },
@@ -72,6 +74,11 @@ export default function Header() {
             </div>
           ))}
         </nav>
+
+        {/* دکمه ورود / ثبت نام */}
+        <button className="auth-btn" onClick={() => setAuthModalOpen(true)}>
+          ورود / ثبت نام
+        </button>
       </header>
 
       {searchBoxOpen && (
@@ -81,8 +88,10 @@ export default function Header() {
         </div>
       )}
 
+      {/* نمایش مودال */}
+      <AuthModal isOpen={authModalOpen} onClose={() => setAuthModalOpen(false)} />
+
       <style jsx>{`
-        /* ====== ساختار کلی هدر ====== */
         .header {
           display: flex;
           justify-content: space-between;
@@ -95,13 +104,11 @@ export default function Header() {
           font-size: 20px;
           font-weight: bold;
         }
-
-        /* ====== منوی دسکتاپ ====== */
         .nav {
           display: flex;
           gap: 20px;
-          justify-content: center; /* وسط چین در دسکتاپ */
-          flex: 1; /* تا وسط قرار بگیره */
+          justify-content: center;
+          flex: 1;
         }
         .dropdown {
           position: relative;
@@ -134,15 +141,23 @@ export default function Header() {
           padding: 10px;
           border: 1px solid #ccc;
         }
-
-        /* ====== دکمه همبرگری ====== */
         .menu-toggle {
           display: none;
           font-size: 24px;
           cursor: pointer;
         }
-
-        /* ====== حالت موبایل/تبلت و ≤ 1400px ====== */
+        .auth-btn {
+          border: 1px solid #354f52;
+          border-radius: 8px;
+          padding: 6px 14px;
+          background: white;
+          cursor: pointer;
+          font-weight: 500;
+        }
+        .auth-btn:hover {
+          background: #354f52;
+          color: white;
+        }
         @media (max-width: 1250px) {
           .menu-toggle {
             display: block;
@@ -152,11 +167,11 @@ export default function Header() {
             flex-direction: column;
             position: absolute;
             top: 60px;
-            left: 20px; /* دقیقا زیر دکمه همبرگری */
+            left: 20px;
             background: white;
             width: 200px;
             border: 1px solid #ccc;
-            padding: 10px 10px;
+            padding: 10px;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
           }
           .nav.open {
