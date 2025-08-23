@@ -81,8 +81,6 @@ export default function AuthModal({ isOpen, onClose }) {
   animation: fadeIn 0.25s ease-out;
   direction: rtl;
   text-align: right;
-
-  /* 👇 اضافه شده */
   max-height: 80vh;     /* ارتفاع حداکثر ۸۰٪ از صفحه */
   overflow-y: auto;     /* فقط محتوای داخل مودال اسکرول بخوره */
    scrollbar-width: thin;           /* برای فایرفاکس */

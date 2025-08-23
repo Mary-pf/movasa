@@ -2,7 +2,8 @@
 
 import React, { useState } from "react";
 import { FaSearch, FaBars, FaTimes } from "react-icons/fa";
-import AuthModal from "./AuthModal"; // مودال جدا
+import Link from "next/link";
+import AuthModal from "./AuthModal";
 
 export default function Header() {
   const [openDropdown, setOpenDropdown] = useState(null);
@@ -11,13 +12,66 @@ export default function Header() {
   const [authModalOpen, setAuthModalOpen] = useState(false);
 
   const menuItems = [
-    { id: "car", label: "بیمه وسایل نقلیه", options: ["Option 1", "Option 2"] },
-    { id: "home", label: "بیمه اموال", options: ["Option A", "Option B"] },
-    { id: "business", label: "بیمه مسئولیت", options: ["Biz 1", "Biz 2"] },
-    { id: "mortgage", label: "مشارکت", options: ["Rate 1", "Rate 2"] },
-    { id: "credit", label: "سرویس‌های اعتباری", options: ["Card 1", "Card 2"] },
-    { id: "more", label: "گزینه های بیشتر", options: ["Option X", "Option Y", "Option Z"] },
-    { id: "news", label: "اخبار و منابع", options: ["News 1", "Resource A", "Resource B"] },
+    { 
+      id: "car", 
+      label: "بیمه وسایل نقلیه", 
+      options: [
+        { title: "بیمه شخص ثالث", href: "/thired-party" },
+        // { title: "بیمه بدتع خودرو", href: "/insurance/body" },
+        // { title: "بیمه شخص ثالث خودرو", href: "/insurance/driver" },
+        // { title: "بیمه حوادث راننده", href: "/insurance/accident" },
+      ] 
+    },
+    { 
+      id: "home", 
+      label: "بیمه اموال", 
+      options: [
+        { title: "بیمه منزل", href: "/insurance/home" },
+        { title: "بیمه کسب‌وکار", href: "/insurance/business" },
+      ] 
+    },
+    { 
+      id: "business", 
+      label: "بیمه مسئولیت", 
+      options: [
+        { title: "مسئولیت عمومی", href: "/insurance/general" },
+        { title: "مسئولیت حرفه‌ای", href: "/insurance/professional" },
+      ] 
+    },
+    { 
+      id: "mortgage", 
+      label: "مشارکت", 
+      options: [
+        { title: "طرح A", href: "/partnership/a" },
+        { title: "طرح B", href: "/partnership/b" },
+      ] 
+    },
+    { 
+      id: "credit", 
+      label: "سرویس‌های اعتباری", 
+      options: [
+        { title: "کارت اعتباری", href: "/credit/card" },
+        { title: "وام فوری", href: "/credit/loan" },
+      ] 
+    },
+    { 
+      id: "more", 
+      label: "گزینه های بیشتر", 
+      options: [
+        { title: "گزینه X", href: "/more/x" },
+        { title: "گزینه Y", href: "/more/y" },
+        { title: "گزینه Z", href: "/more/z" },
+      ] 
+    },
+    { 
+      id: "news", 
+      label: "اخبار و منابع", 
+      options: [
+        { title: "خبر ۱", href: "/news/1" },
+        { title: "منبع A", href: "/news/a" },
+        { title: "منبع B", href: "/news/b" },
+      ] 
+    },
   ];
 
   const toggleDropdown = (id) => {
@@ -63,14 +117,19 @@ export default function Header() {
               )}
 
               {openDropdown === id && (
-                <div className="dropdown-menu">
-                  {options.map((opt) => (
-                    <div key={opt} className="dropdown-item">
-                      {opt}
-                    </div>
-                  ))}
-                </div>
-              )}
+  <div className="dropdown-menu">
+    {options.map((opt) => (
+      <Link
+        key={opt.title}
+        href={opt.href}
+        className="dropdown-item"
+        onClick={() => setOpenDropdown(null)} // بستن منو بعد کلیک
+      >
+        {opt.title}
+      </Link>
+    ))}
+  </div>
+)}
             </div>
           ))}
         </nav>
@@ -117,15 +176,21 @@ export default function Header() {
         .arrow {
           margin-left: 5px;
         }
-        .dropdown-menu {
-          position: absolute;
-          top: 35px;
-          left: 0;
-          background: white;
-          border: 1px solid #ccc;
-          min-width: 150px;
-          z-index: 10;
-        }
+ .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;              /* 👈 راست‌چین */
+  left: auto;            /* مطمئن بشیم از سمت چپ محدود نیست */
+  background: white;
+  border: 1px solid #ccc;
+  min-width: 180px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  text-align: right;     /* 👈 متن آیتم‌ها هم راست‌چین بشه */
+}
+
         .dropdown-item {
           padding: 8px 12px;
         }
