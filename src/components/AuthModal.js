@@ -14,7 +14,7 @@ export default function AuthModal({ isOpen, onClose }) {
         <button className="close-btn" onClick={onClose}>×</button>
 
         {step === 1 && (
-          <div className="step">
+          <div className="step step-phone">
             <h2>برای ورود یا ثبت‌نام شماره تلفن همراه خود را وارد کنید</h2>
             <input type="text" placeholder="شماره موبایل" />
             <button onClick={() => setStep(2)}>ادامه</button>
@@ -145,6 +145,44 @@ export default function AuthModal({ isOpen, onClose }) {
           border-radius: 10px; border: none; cursor: pointer;
           font-size: 15px; font-weight: 500;
         }
+
+        /* فقط برای مرحله اول */
+.step-phone {
+  text-align: center;
+}
+
+.step-phone input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  font-size: 15px;
+  margin-bottom: 14px;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step-phone input:focus {
+  border-color: #1976d2;
+  box-shadow: 0 0 5px rgba(25,118,210,0.3);
+  outline: none;
+}
+
+.step-phone button {
+  width: 100%;
+  padding: 12px;
+  background: #1976d2;
+  color: white;
+  font-size: 15px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.step-phone button:hover {
+  background: #1258a8;
+}
+
       `}</style>
     </div>
   );
